@@ -1,0 +1,29 @@
+﻿@model EmployeeModel;
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="card">
+  <div class="card-header">
+    Create Employee
+  </div>
+  <div class="card-body">
+    <form asp-action="Create" asp-controller="Employee" method="post" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label  class="form-label">Name Employee </label>
+    <input type="text" class="form-control" asp-for="Name">
+
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Phone</label>
+    <input type="text" class="form-control" asp-for="PhoneNumber">
+  </div>
+    <div class="mb-3">
+
+    <input type="file" class="form-control" name="image">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Save</button>
+  <a href="@Url.Action("Index","Employee")" class="btn btn-danger">Back</a>
+</form>
+  </div>
